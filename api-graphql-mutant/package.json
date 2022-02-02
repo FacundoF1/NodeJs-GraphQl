@@ -1,0 +1,49 @@
+{
+  "name": "api-graphql-mutant",
+  "version": "1.0.0",
+  "description": "Aplicación para gestionar el almacenamiento de datos. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles --verbose",
+    "coverage": "jest --coverage",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FacundoF1/api-graphql-mutant.git"
+  },
+  "keywords": [
+    "bcryptjs",
+    "graphql-yoga",
+    "jsonwebtoken",
+    "prisma-client-lib",
+    "@prisma/cli"
+  ],
+  "author": "Facundo Ferrari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FacundoF1/api-graphql-mutant/issues"
+  },
+  "homepage": "https://github.com/FacundoF1/api-graphql-mutant#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-request": "^3.0.0",
+    "graphql-tester": "0.0.5",
+    "graphql-yoga": "^1.18.3",
+    "jest": "^26.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "logrocket": "^1.0.10",
+    "prisma-client-lib": "^1.34.10",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/register": "^7.10.5",
+    "@prisma/cli": "^2.3.0",
+    "babel-plugin-minify-builtins": "^0.5.0",
+    "babel-preset-es2020": "^1.0.2",
+    "babel-preset-latest": "^6.24.1",
+    "graphql": "^15.3.0"
+  }
+}

@@ -1,0 +1,6 @@
+endpoint: https://eu1.prisma.sh/facundo/api-graphql-mutant/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/

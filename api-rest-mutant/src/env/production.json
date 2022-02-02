@@ -1,0 +1,10 @@
+{
+    "PORT": 80,
+    "uriHttp": "http://localhost:4000/",
+    "uriWs": "ws://localhost:4000/graphql",
+    "MUTANT_DNA_SEQUENCES": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"],
+    "HUMAN_DNA_SEQUENCES": ["ZTGCGA","QAGTGC","LWAVGT","AQFQSG","CKCPTA","TGACHG"],
+    "swagger": {
+        "host": "localhost:80"
+    }
+}

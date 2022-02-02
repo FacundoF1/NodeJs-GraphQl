@@ -1,0 +1,79 @@
+{
+  "name": "api-rest-mutant",
+  "version": "1.0.0",
+  "private": true,
+  "nodemonConfig": {
+    "exec": "npm run dev",
+    "watch": [
+      "src/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "test": "jest --verbose --runInBand --detectOpenHandles --mode development",
+    "coverage": "jest --coverage --runInBand --detectOpenHandles --mode development",
+    "qa": "nodemon --exec babel-node src/bin/www env=test",
+    "start": "nodemon --exec babel-node src/bin/www env=development",
+    "dev": "nodemon --exec babel-node src/bin/www env=development",
+    "build": "npm-run-all clean transpile",
+    "serve": "nodemon --exec babel-node dist/bin/www env=production",
+    "transpile": "babel ./src --out-dir dist --source-maps --copy-files",
+    "watch:dev": "nodemon",
+    "clean": "rimraf dist"
+  },
+  "author": "Facundo Ferrari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FacundoF1/api-rest-mutant/issues"
+  },
+  "homepage": "https://github.com/FacundoF1/api-rest-mutant#readme",
+  "dependencies": {
+    "@apollo/client": "^3.1.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-error": "^1.1.13",
+    "apollo-link-http": "^1.5.17",
+    "apollo-link-state": "^0.4.2",
+    "apollo-link-ws": "^1.0.20",
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "helmet": "^3.23.3",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "subscriptions-transport-ws": "^0.9.17",
+    "swagger-jsdoc": "^3.7.0",
+    "swagger-ui-express": "^4.0.6",
+    "validatorjs": "^3.18.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "babel-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.1",
+    "jest": "^26.1.0",
+    "supertest": "^4.0.2"
+  }
+}

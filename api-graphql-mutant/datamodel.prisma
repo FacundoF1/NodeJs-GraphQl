@@ -1,0 +1,20 @@
+type Mutant {
+  id: ID! @id
+  postedBy: Adn!
+} 
+
+type Human {
+  id: ID! @id
+  postedBy: Adn!
+}
+
+type Adn {
+  id: ID! @id
+  sequences: [Sequence!]!
+}
+
+type Sequence {
+  id: ID! @id
+  value: String!
+  adn: Adn!
+}

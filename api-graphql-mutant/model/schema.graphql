@@ -1,0 +1,52 @@
+type Query {
+  stats( filter: String, skip: Int, first: Int, orderBy: LinkOrderByInput ): State!
+}
+
+type Mutation {
+  postMutant( input: AdnInput ): Mutant
+  postHuman( input: AdnInput ): Human
+}
+
+input AdnInput {
+  value: [ String!]! 
+}
+
+type Mutant {
+  id: ID!
+  postedBy: Adn!
+}
+
+type Human {
+  id: ID!
+  postedBy: Adn!
+}
+
+type Adn {
+  id: ID!
+  sequences: [Sequence!]!
+}
+
+type Sequence {
+  id: ID!
+  value: String!
+  adn: Adn!
+}
+
+type State {
+  count_mutant_dna: Int,
+  count_human_dna: Int
+}
+
+type Subscription {
+  newMutant: Mutant
+  newHuman: Human
+}
+
+enum LinkOrderByInput {
+  description_ASC
+  description_DESC
+  url_ASC
+  url_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
